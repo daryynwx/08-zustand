@@ -53,16 +53,23 @@ export default function NoteForm() {
         />
       </div>
 
-      <div className={css.formGroup}>
-        <label htmlFor="tag">Tag</label>
-        <select id="tag" name="tag" className={css.select}>
-          <option value="Todo">Todo</option>
-          <option value="Work">Work</option>
-          <option value="Personal">Personal</option>
-          <option value="Meeting">Meeting</option>
-          <option value="Shopping">Shopping</option>
-        </select>
-      </div>
+<div className={css.formGroup}>
+  <label htmlFor="tag">Tag</label>
+  <select
+    id="tag"
+    name="tag"
+    className={css.select}
+    value={draft.tag}
+    onChange={(e) => setDraft({ ...draft, tag: e.target.value })}
+  >
+    <option value="Todo">Todo</option>
+    <option value="Work">Work</option>
+    <option value="Personal">Personal</option>
+    <option value="Meeting">Meeting</option>
+    <option value="Shopping">Shopping</option>
+  </select>
+</div>
+
 
       <div className={css.actions}>
         <button
